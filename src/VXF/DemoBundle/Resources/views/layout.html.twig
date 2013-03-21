@@ -1,0 +1,137 @@
+{% extends 'VXFDemoBundle::base.html.twig' %}
+{% from 'MopaBootstrapBundle::flash.html.twig' import session_flash %}
+
+
+
+{% block title %}vxf ERP muthafucka{% endblock title %}
+
+{% block head_title %}vxf ERP muthafucka{% endblock %}
+
+{% block head_style %}
+{% stylesheets
+       '@VXFDemoBundle/Resources/public/less/demo.less'
+%}
+	<link href="{{ asset_url }}" type="text/css" rel="stylesheet" media="screen" />
+{% endstylesheets %}
+{% endblock head_style %}
+
+{% block navbar %}
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container-fluid">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="brand" href="#">vxf ERP mothafucka</a>
+          <div class="nav-collapse collapse">
+            <p class="navbar-text pull-right">
+              Logged in as <a href="#" class="navbar-link">Username</a>
+            </p>
+            <ul class="nav">
+              <li class="active"><a href="#">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+{% endblock navbar %}
+
+{% block container %}
+<div class="container-fluid">
+  <div class="row-fluid">
+    <div class="span3">
+      <div class="well sidebar-nav">
+        {{ knp_menu_render('asside') }}
+        <!-- ul class="nav nav-list">
+          <li><a href="#">Dashboard</a></li>
+          <li class="nav-header">Sidebar</li>
+          <li class="active"><a href="#">Clientes</a></li>
+          <li><a href="#">Projectos</a></li>
+          <li><a href="#">Documentos</a></li>
+          <li class="nav-header">Lançamento</li>
+          <li><a href="#">Pagamentos</a></li>
+          <li><a href="#">Comunicação</a></li>
+          <li class="nav-header">Exploração</li>
+          <li><a href="#">Income</a></li>
+          <li><a href="#">Taxas</a></li>
+          <li class="nav-header">Configuração</li>
+          <li><a href="#">Avisos</a></li>
+          <li><a href="#">Taxas</a></li>
+        </ul -->
+      </div><!--/.well -->
+    </div><!--/span-->
+    <div class="span9">
+            {% block page_header %}
+            <div class="page-header">
+                  <h1>{% block headline %}Mopa Bootstrap Bundle{% endblock headline %}</h1>
+            </div>
+            {% endblock page_header %}
+
+            {% block flashes %}
+            {% if app.session.flashbag.peekAll|length > 0 %}
+            <div class="row-fluid">
+                <div class="span12">
+                {{ session_flash() }}
+                </div>
+            </div>
+            {% endif %}
+            {% endblock flashes %}
+            
+      {% block content_row %}
+      <div class="row-fluid">
+        {% block content %}
+        <div class="span4">
+          <h2>Heading</h2>
+          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+          <p><a class="btn" href="#">View details &raquo;</a></p>
+        </div><!--/span-->
+        <div class="span4">
+          <h2>Heading</h2>
+          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+          <p><a class="btn" href="#">View details &raquo;</a></p>
+        </div><!--/span-->
+        <div class="span4">
+          <h2>Heading</h2>
+          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+          <p><a class="btn" href="#">View details &raquo;</a></p>
+        </div><!--/span-->
+      </div><!--/row-->
+      <div class="row-fluid">
+        <div class="span4">
+          <h2>Heading</h2>
+          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+          <p><a class="btn" href="#">View details &raquo;</a></p>
+        </div><!--/span-->
+        <div class="span4">
+          <h2>Heading</h2>
+          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+          <p><a class="btn" href="#">View details &raquo;</a></p>
+        </div><!--/span-->
+        <div class="span4">
+          <h2>Heading</h2>
+          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+          <p><a class="btn" href="#">View details &raquo;</a></p>
+        </div><!--/span-->
+        {% endblock content %}
+      </div><!--/row-->
+      {% endblock content_row %}
+    </div><!--/span-->
+  </div><!--/row-->
+
+  <hr>
+
+  <footer>
+{% block footer %}
+	<div>vxf ERP &copy; <a href="http://vxf.upquark.org/">vxf</a></div>
+{% endblock %}
+  </footer>
+
+</div><!--/.fluid-container-->
+{% endblock container %}
+
+
+

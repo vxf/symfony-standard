@@ -1,0 +1,3 @@
+vxf_demo_homepage:
+    pattern:  /
+    defaults: { _controller: VXFDemoBundle:Default:index }

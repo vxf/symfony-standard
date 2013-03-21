@@ -1,0 +1,23 @@
+services:
+    vxf_demo.menu_builder:
+        class: VXF\DemoBundle\Menu\MenuBuilder
+        arguments: ["@knp_menu.factory"]
+
+#    vxf_demo.menu.main:
+#        class: Knp\Menu\MenuItem # the service definition requires setting the class
+#        factory_service: vxf_demo.menu_builder
+#        factory_method: mainMenu
+#        arguments: ["@request"]
+#        scope: request # needed as we have the request as a dependency here
+#        tags:
+#            - { name: knp_menu.menu, alias: main } # The alias is what is used to retrieve the menu
+
+    vxf_demo.menu.asside:
+        class: Knp\Menu\MenuItem # the service definition requires setting the class
+        factory_service: vxf_demo.menu_builder
+        factory_method: assideMenu
+        arguments: ["@request"]
+        scope: request # needed as we have the request as a dependency here
+        tags:
+            - { name: knp_menu.menu, alias: asside } # The alias is what is used to retrieve the menu
+

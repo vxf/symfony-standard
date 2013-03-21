@@ -1,5 +1,6 @@
 imports:
     - { resource: config.yml }
+    - { resource: @VXFDemoBundle/Resources/config/services.yml }
 
 framework:
     router:   { resource: "%kernel.root_dir%/config/routing_dev.yml" }
@@ -24,6 +25,7 @@ monolog:
 
 assetic:
     use_controller: true
+    bundles:        [ "VXFDemoBundle" ]
 
 #swiftmailer:
 #    delivery_address: me@example.com
