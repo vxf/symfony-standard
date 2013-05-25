@@ -6,6 +6,11 @@ including bootstrap.
 
 This is currently NOT WORKING don't use it.
 
+- [x] Installable
+- [ ] CRUD skeleton for bootstrap
+- [ ] Demo Bundle
+- [ ] Stable
+
 Symfony Standard Edition
 ========================
 
