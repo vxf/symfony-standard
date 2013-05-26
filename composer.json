@@ -20,16 +20,17 @@
         "sensio/generator-bundle": "2.3.*",
         "incenteev/composer-parameter-handler": "~2.0",
 
-        "mopa/bootstrap-bundle": "dev-master",
-        "mopa/composer-bridge": "dev-master",
-        "twitter/bootstrap": "dev-master",
-        "knplabs/knp-menu-bundle": "dev-master",
-        "knplabs/knp-menu": "dev-master",
-        "knplabs/knp-paginator-bundle": "dev-master",
+        "mopa/bootstrap-bundle": "2.3.*",
+        "mopa/composer-bridge": "1.1.*",
+        "twitter/bootstrap": "2.3.2",
+        "knplabs/knp-menu-bundle": "2.0.*",
+        "knplabs/knp-menu": "2.0.*",
+        "knplabs/knp-paginator-bundle": "2.3.*",
+        "pimple/pimple": "1.0.*",
+
         "craue/formflow-bundle": "dev-wip-symfony-2.3",
-        "pimple/pimple": "dev-master",
-	"doctrine/data-fixtures": "dev-master",
-        "willdurand/faker-bundle": "dev-master"
+	"doctrine/data-fixtures": "1.0.*",
+        "willdurand/faker-bundle": "0.1.1"
     },
     "scripts": {
         "post-install-cmd": [
