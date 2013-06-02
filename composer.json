@@ -28,7 +28,7 @@
         "knplabs/knp-paginator-bundle": "2.3.*",
         "pimple/pimple": "1.0.*",
 
-        "craue/formflow-bundle": "dev-wip-symfony-2.3",
+        "craue/formflow-bundle": "2.0.*",
 	"doctrine/data-fixtures": "1.0.*@dev",
         "willdurand/faker-bundle": "0.1.1"
     },
@@ -61,7 +61,7 @@
             "file": "app/config/parameters.yml"
         },
         "branch-alias": {
-            "dev-master": "2.4-dev"
+            "dev-master": "2.3-dev"
         }
     }
 }
